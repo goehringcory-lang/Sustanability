@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Granite circle background -->
+  <circle cx="60" cy="60" r="58" fill="#F7F6F4" stroke="#C8C5BF" stroke-width="1.5"/>
+  <!-- House shape — minimal geometric -->
+  <path d="M32 58L60 34L88 58" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- House body -->
+  <path d="M38 56V84H82V56" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Door -->
+  <rect x="52" y="66" width="16" height="18" rx="1" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Door handle accent -->
+  <circle cx="64" cy="76" r="2" fill="#A85121"/>
+</svg>
