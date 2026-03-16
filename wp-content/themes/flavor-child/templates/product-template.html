@@ -1,0 +1,52 @@
+<!-- ═══════════════════════════════════════════════════════════════════
+     PRODUCT TEMPLATE
+     Copy this template when adding a new product.
+     Two parts: (1) the card for the grid, (2) the JS data entry.
+     ═══════════════════════════════════════════════════════════════════ -->
+
+
+<!-- ── PART 1: Product Card ──────────────────────────────────────────
+     Paste this inside the .product-grid div for the right category.
+     Update: product name, image, category, description, price, tag.
+     ─────────────────────────────────────────────────────────────────── -->
+
+<div class="product-card" onclick="showProduct('PRODUCT NAME')">
+    <div class="card-img">
+        <!-- Replace with real image: -->
+        <!-- <img src="wp-content/themes/flavor-child/images/product-slug.jpg" alt="PRODUCT NAME" style="width:100%;height:100%;object-fit:cover;"> -->
+        <span class="img-label">Product Photo</span>
+    </div>
+    <div class="card-body">
+        <span class="card-category">CATEGORY</span>
+        <h3>PRODUCT NAME</h3>
+        <p class="card-desc">One-sentence description of what makes this product worth recommending.</p>
+        <div class="card-meta">
+            <span class="card-price">~$XX</span>
+            <span class="card-tag">KEY FEATURE</span>
+        </div>
+    </div>
+</div>
+
+
+<!-- ── PART 2: Product Data Entry ────────────────────────────────────
+     Add this inside the `var products = { ... }` JavaScript object.
+     The key MUST exactly match the product name in the card above.
+     ─────────────────────────────────────────────────────────────────── -->
+
+<!--
+"PRODUCT NAME": {
+    category: "CATEGORY",
+    section: "Drink",
+    price: "~$XX",
+    tag: "KEY FEATURE",
+    url: "https://www.amazon.com/dp/ASIN?tag=YOURTAG-20",
+    body: '<p>Full review. Why we use it, how long we have had it, what we like and what we do not.</p><p>Be specific: materials, durability, real-world performance. Mention any trade-offs honestly.</p>',
+    specs: [
+        ["Material", "e.g. 18/8 stainless steel"],
+        ["Weight", "e.g. 8 oz"],
+        ["Warranty", "e.g. Lifetime"],
+        ["Made in", "e.g. USA"],
+        ["Plastic-free", "Yes / Mostly / No"]
+    ]
+},
+-->

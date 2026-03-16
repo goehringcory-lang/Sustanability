@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Granite circle background -->
+  <circle cx="60" cy="60" r="58" fill="#F7F6F4" stroke="#C8C5BF" stroke-width="1.5"/>
+  <!-- Three recycling arrows -->
+  <path d="M60 32L48 52H54V62H66V52H72L60 32Z" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 66L28 86H52" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80 66L92 86H68" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Arrow tips -->
+  <polygon points="52,86 46,80 46,88" fill="#0F0F0F"/>
+  <polygon points="68,86 74,80 74,88" fill="#0F0F0F"/>
+  <!-- Accent leaf in center -->
+  <path d="M55 72Q60 64 65 72Q60 76 55 72" fill="#A85121"/>
+</svg>

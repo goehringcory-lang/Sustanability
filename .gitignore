@@ -1,0 +1,47 @@
+# === WordPress Core ===
+# Ignore everything at the root level by default,
+# then whitelist only what we want to track.
+/*
+
+# === Whitelist: Child Theme ===
+!wp-content/
+wp-content/*
+!wp-content/themes/
+wp-content/themes/*
+!wp-content/themes/flavor-child/
+
+# === Project Files ===
+!.gitignore
+!.htaccess
+!preview.html
+!README.md
+!setup-wordpress.sh
+!wp-config-additions.php
+
+# === Dependencies ===
+node_modules/
+vendor/
+package-lock.json
+
+# === Environment / Secrets ===
+.env
+.env.*
+wp-config.php
+
+# === Uploads & Cache ===
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# === IDE / Editor ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
