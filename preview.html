@@ -744,6 +744,29 @@ a:hover { color: var(--accent-warm); }
     border-radius: 100px;
 }
 
+.product-card .card-buy,
+.featured-card .card-buy {
+    display: block;
+    margin-top: 0.75rem;
+    padding: 0.5rem 0 0;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text);
+    text-decoration: none;
+    border-top: 1px solid var(--border);
+    transition: color 0.2s;
+}
+.product-card .card-buy:hover,
+.featured-card .card-buy:hover { color: var(--accent); }
+.product-card .card-buy-dark {
+    color: rgba(255,255,255,0.6);
+    border-top-color: rgba(255,255,255,0.1);
+}
+.product-card .card-buy-dark:hover { color: #fff; }
+
 /* ── Product Detail Page ───────────────────────────────────────────── */
 
 .product-detail {
@@ -1423,7 +1446,7 @@ a:hover { color: var(--accent-warm); }
             <h2 class="section-title">Products we reach for every day.</h2>
             <p class="section-subtitle">Out of everything we've tested, these are the ones that earned a permanent spot.</p>
             <div class="featured-row">
-                <div class="featured-card" onclick="showPage('products');showProduct('Klean Kanteen Classic Insulated Bottle')" style="cursor:pointer;">
+                <div class="featured-card">
                     <div class="granite-img" style="aspect-ratio:4/3;border-radius:var(--radius-md);">
                         <span class="img-label">Product Photo</span>
                     </div>
@@ -1432,9 +1455,10 @@ a:hover { color: var(--accent-warm); }
                         <h3>Klean Kanteen Classic Insulated Bottle</h3>
                         <p>The original stainless steel bottle. B Corp certified, lifetime warranty, zero toxic coatings.</p>
                         <span class="featured-price">From $20</span>
+                        <a href="https://www.amazon.com/dp/B08JX47MCJ/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
-                <div class="featured-card" onclick="showPage('products');showProduct('Tramontina Tri-Ply Clad 12&quot; Fry Pan')" style="cursor:pointer;">
+                <div class="featured-card">
                     <div class="granite-img" style="aspect-ratio:4/3;border-radius:var(--radius-md);">
                         <span class="img-label">Product Photo</span>
                     </div>
@@ -1443,9 +1467,10 @@ a:hover { color: var(--accent-warm); }
                         <h3>Tramontina Tri-Ply Clad 12" Fry Pan</h3>
                         <p>Wirecutter's budget pick. Tri-ply stainless steel, no synthetic coatings, built to last decades.</p>
                         <span class="featured-price">~$35</span>
+                        <a href="https://www.amazon.com/dp/B00JAP44MQ/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
-                <div class="featured-card" onclick="showPage('products');showProduct('Brondell SMB-25 Bidet Attachment')" style="cursor:pointer;">
+                <div class="featured-card">
                     <div class="granite-img" style="aspect-ratio:4/3;border-radius:var(--radius-md);">
                         <span class="img-label">Product Photo</span>
                     </div>
@@ -1454,6 +1479,7 @@ a:hover { color: var(--accent-warm); }
                         <h3>Brondell SMB-25 Bidet Attachment</h3>
                         <p>All-brass, plastic-free, dual temperature. The most sustainable bidet attachment we've found.</p>
                         <span class="featured-price">~$120</span>
+                        <a href="https://www.amazon.com/dp/B09ZK6CVWD/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
             </div>
@@ -1540,7 +1566,7 @@ a:hover { color: var(--accent-warm); }
             <h2 class="section-title" style="font-size: clamp(1.6rem, 3vw, 2.2rem);">What touches your lips every day.</h2>
             <p style="color: var(--text-secondary); max-width: 560px; margin-bottom: 2rem;">Water, coffee, tea. The things you drink most deserve containers that won't leach microplastics into every sip.</p>
             <div class="product-grid">
-                <div class="product-card" onclick="showProduct('Klean Kanteen Classic Insulated Bottle')">
+                <div class="product-card">
                     <div class="card-img"><span class="img-label">Product Photo</span></div>
                     <div class="card-body">
                         <p class="card-category">Water Bottle</p>
@@ -1550,9 +1576,10 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">From $20</span>
                             <span class="card-tag">B Corp Certified</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B08JX47MCJ/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
-                <div class="product-card" onclick="showProduct('Klean Kanteen Classic 27 oz')">
+                <div class="product-card">
                     <div class="card-img"><span class="img-label">Product Photo</span></div>
                     <div class="card-body">
                         <p class="card-category">Water Bottle</p>
@@ -1562,6 +1589,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$25</span>
                             <span class="card-tag">Stainless Steel</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B0093IR4EK/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1574,6 +1602,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$47</span>
                             <span class="card-tag">All Glass</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B0000YWF5E/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1586,6 +1615,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$35</span>
                             <span class="card-tag">Insulated Steel</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B073WJMKHN/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1598,6 +1628,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$40</span>
                             <span class="card-tag">Lifetime Warranty</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B07L6M56VN/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
             </div>
@@ -1611,7 +1642,7 @@ a:hover { color: var(--accent-warm); }
             <h2 class="section-title" style="font-size: clamp(1.6rem, 3vw, 2.2rem);">The kitchen, rebuilt without plastic.</h2>
             <p style="color: var(--text-secondary); max-width: 560px; margin-bottom: 2rem;">Cookware, utensils, food storage, kids' plates. Everything that touches your food should be as clean as the food itself.</p>
             <div class="product-grid">
-                <div class="product-card" onclick="showProduct('Tramontina Tri-Ply Clad 12&quot; Fry Pan')">
+                <div class="product-card">
                     <div class="card-img"><span class="img-label">Product Photo</span></div>
                     <div class="card-body">
                         <p class="card-category">Cookware</p>
@@ -1621,6 +1652,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$35</span>
                             <span class="card-tag">Wirecutter Pick</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B00JAP44MQ/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1633,6 +1665,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$700</span>
                             <span class="card-tag">Made in USA</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B005H8KD3E/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1645,6 +1678,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$30</span>
                             <span class="card-tag">Recycled Steel</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B0C6TX2V1L/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1657,6 +1691,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$18</span>
                             <span class="card-tag">Compostable</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B0126LMDFK/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1669,6 +1704,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$20</span>
                             <span class="card-tag">Made in USA</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B00006JSUA/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1681,6 +1717,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$370</span>
                             <span class="card-tag">Lifetime Warranty</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B00VA5HG0Q/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1693,6 +1730,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$120</span>
                             <span class="card-tag">Solid Wood</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B0000CFV4K/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
             </div>
@@ -1716,6 +1754,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$13</span>
                             <span class="card-tag">Zero Waste</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B07TN3W1KX/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1728,6 +1767,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$15</span>
                             <span class="card-tag">Plastic-Free</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B07VQC79W4/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1740,6 +1780,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$12</span>
                             <span class="card-tag">Refillable</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B0B8F3924K/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1752,6 +1793,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$40</span>
                             <span class="card-tag">Zero Plastic</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B002A8JO1Q/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
             </div>
@@ -1765,7 +1807,7 @@ a:hover { color: var(--accent-warm); }
             <h2 class="section-title" style="font-size: clamp(1.6rem, 3vw, 2.2rem);">The everyday essentials, done right.</h2>
             <p style="color: var(--text-secondary); max-width: 560px; margin-bottom: 2rem;">Clothing, bedding, home goods, and the stuff you reach for every day. Quality materials that last, made without cutting corners on the planet.</p>
             <div class="product-grid">
-                <div class="product-card" onclick="showProduct('Brondell SMB-25 Bidet Attachment')">
+                <div class="product-card">
                     <div class="card-img"><span class="img-label">Product Photo</span></div>
                     <div class="card-body">
                         <p class="card-category">Bathroom</p>
@@ -1775,6 +1817,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$120</span>
                             <span class="card-tag">Plastic-Free</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B09ZK6CVWD/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1787,6 +1830,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$198</span>
                             <span class="card-tag">Organic Cotton</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B01N06EXWE/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1799,6 +1843,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$39</span>
                             <span class="card-tag">Refillable</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B09W7TD9C4/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1811,6 +1856,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$6</span>
                             <span class="card-tag">Compostable</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B07GX6TRQX/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1823,6 +1869,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price">~$15</span>
                             <span class="card-tag">Zero Waste</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B01DC1D4JM/?tag=sustanability-20" class="card-buy" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
             </div>
@@ -1846,6 +1893,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price" style="color:#fff;">~$350</span>
                             <span class="card-tag">Lifetime Repair</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B086HMX9DB/?tag=sustanability-20" class="card-buy card-buy-dark" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card" style="background: var(--stone-dark); border-color: rgba(255,255,255,0.08);">
@@ -1858,6 +1906,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price" style="color:#fff;">~$20</span>
                             <span class="card-tag">Lifetime Warranty</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B000XIFUZ4/?tag=sustanability-20" class="card-buy card-buy-dark" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card" style="background: var(--stone-dark); border-color: rgba(255,255,255,0.08);">
@@ -1870,6 +1919,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price" style="color:#fff;">~$79</span>
                             <span class="card-tag">Worn Wear</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B0BV1XRMS6/?tag=sustanability-20" class="card-buy card-buy-dark" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
                 <div class="product-card" style="background: var(--stone-dark); border-color: rgba(255,255,255,0.08);">
@@ -1882,6 +1932,7 @@ a:hover { color: var(--accent-warm); }
                             <span class="card-price" style="color:#fff;">~$350</span>
                             <span class="card-tag">Made in USA</span>
                         </div>
+                        <a href="https://www.amazon.com/dp/B0032UYNKI/?tag=sustanability-20" class="card-buy card-buy-dark" target="_blank" rel="nofollow sponsored">View on Amazon →</a>
                     </div>
                 </div>
             </div>
@@ -1979,7 +2030,7 @@ a:hover { color: var(--accent-warm); }
                 <div class="criteria-item">
                     <p class="criteria-num">01</p>
                     <h3>We use it ourselves</h3>
-                    <p>Not for a weekend. Not for a sponsored photo shoot. In our actual life, for months, before we write a word about it. The Lodge cast iron skillet has cooked hundreds of our meals. The Darn Tough socks have been on trails in Yosemite Valley, Tuolumne Meadows, and the High Sierra.</p>
+                    <p>Not for a weekend. Not for a sponsored photo shoot. In our actual life, for months, before we write a word about it. The <a href="https://www.amazon.com/dp/B00006JSUA/?tag=sustanability-20" target="_blank" rel="nofollow sponsored">Lodge cast iron skillet</a> has cooked hundreds of our meals. The <a href="https://www.amazon.com/dp/B000XIFUZ4/?tag=sustanability-20" target="_blank" rel="nofollow sponsored">Darn Tough socks</a> have been on trails in Yosemite Valley, Tuolumne Meadows, and the High Sierra.</p>
                 </div>
                 <div class="criteria-item">
                     <p class="criteria-num">02</p>
@@ -2234,154 +2285,154 @@ a:hover { color: var(--accent-warm); }
     var products = {
         "Klean Kanteen Classic Insulated Bottle": {
             category: "Water Bottle", section: "Drink", price: "From $20", tag: "B Corp Certified",
-            url: "#klean-kanteen",
+            url: "https://www.amazon.com/dp/B08JX47MCJ/?tag=sustanability-20",
             body: '<p>The Klean Kanteen Classic is the water bottle that started the reusable revolution. The first BPA-free stainless steel bottle ever made, launched in 2004, and still the benchmark. 18/8 food-grade stainless steel with zero toxic coatings. Family- and employee-owned.</p><p>Klean Kanteen is a certified B Corp, a 1% for the Planet member since 2008, and Climate Neutral Certified. The lifetime warranty means if anything goes wrong, they fix or replace it. No questions, no fine print.</p><h2>Why this makes the list</h2><p>This is not just a water bottle — it is a statement about what a company should be. B Corp certified. 1% for the Planet since 2008. Climate Neutral Certified. Lifetime warranty. Family-owned. Every bottle is made from 18/8 food-grade stainless steel with no toxic coatings, and is fully recyclable at end of life.</p><h2>What to know before buying</h2><p>Costs more than generic reusable bottles. Heavier than plastic alternatives. Hot beverage retention (8 hours) is slightly below some competitors like YETI or Stanley. But the certifications, the warranty, and the company behind it make the premium worth it.</p>',
             specs: [["Material", "18/8 food-grade stainless steel"], ["Toxic Coatings", "None"], ["Certifications", "B Corp, 1% for the Planet, Climate Neutral"], ["Warranty", "Lifetime"], ["Hot Retention", "8 hours"], ["Ownership", "Family- and employee-owned"], ["Plastic Parts", "None (stainless steel cap available)"]]
         },
         "Tramontina Tri-Ply Clad 12\" Fry Pan": {
             category: "Cookware", section: "Eat", price: "~$35", tag: "Wirecutter Pick",
-            url: "#tramontina",
+            url: "https://www.amazon.com/dp/B00JAP44MQ/?tag=sustanability-20",
             body: '<p>The Tramontina Tri-Ply Clad is NYT Wirecutter\'s budget pick for best stainless steel pan, and for good reason. Tri-ply clad construction — 18/10 stainless steel exterior and interior with an aluminum core for even heat distribution. PTFE-free, PFAS-free, NSF certified.</p><p>Works on every cooktop including induction. Oven-safe to 500\u00B0F. The stainless steel construction means it is 100% recyclable and will last decades with proper care. No synthetic non-stick coatings to flake off into your food.</p><h2>Why this makes the list</h2><p>At ~$35, this is the most accessible entry point to sustainable cookware. Stainless steel is infinitely recyclable. There are no PTFE or PFAS coatings — nothing synthetic touching your food. The tri-ply construction competes with pans costing three times as much. NSF certified for food safety.</p><h2>What to know before buying</h2><p>Made in Brazil, not domestically. Requires learning proper preheat technique — stainless steel needs to be heated before adding oil and food to achieve a natural non-stick effect. Tramontina has sustainability programs (ISO 14001 certified, GRI reporting) but no B Corp certification. The learning curve is real, but once you get it, you will never go back to coated pans.</p>',
             specs: [["Material", "18/10 stainless steel + aluminum core"], ["Construction", "Tri-ply clad"], ["Coatings", "None (PTFE/PFAS free)"], ["Oven Safe", "500\u00B0F"], ["Cooktops", "All including induction"], ["Certification", "NSF"], ["Made In", "Brazil (ISO 14001)"], ["Warranty", "Lifetime limited"]]
         },
         "Brondell SMB-25 Bidet Attachment": {
             category: "Bathroom", section: "Live", price: "~$120", tag: "Plastic-Free",
-            url: "#brondell",
+            url: "https://www.amazon.com/dp/B09ZK6CVWD/?tag=sustanability-20",
             body: '<p>The Brondell SMB-25 is the most sustainably built bidet attachment we have found. Entirely plastic-free construction — solid brass body with chrome finish, stainless steel T-valve, metal braided hoses. Non-electric, meaning zero energy draw. Dual temperature (warm and cool water) included at the base price.</p><p>A bidet attachment reduces toilet paper use by 75-80%. The average American uses 100 rolls of toilet paper per year. That is 27,000 trees cut down daily just for U.S. toilet paper consumption. A bidet pays for itself in reduced paper purchases within the first year, and the environmental math is even more compelling.</p><h2>Why this makes the list</h2><p>All-metal construction in a category dominated by plastic. Solid brass body, stainless steel valve, metal hoses. Non-electric. Dual temperature without a premium upcharge. Brondell donates 1% of annual sales to environmental nonprofits. And the fundamental impact — reducing toilet paper consumption by 75-80% — is one of the simplest sustainability swaps anyone can make.</p><h2>What to know before buying</h2><p>Less brand recognition than TUSHY or Toto. 1-year warranty is shorter than some competitors. No B Corp certification. Warm water requires connection to the sink\'s hot water supply line, which means the sink needs to be close to the toilet. Installation takes about 15-20 minutes with basic tools.</p>',
             specs: [["Material", "Solid brass with chrome finish"], ["Valve", "Stainless steel T-valve"], ["Hoses", "Metal braided"], ["Power", "Non-electric"], ["Temperature", "Dual (warm and cool)"], ["Plastic Parts", "None"], ["Giving", "1% of sales to environmental nonprofits"], ["Warranty", "1 year"]]
         },
         "Klean Kanteen Classic 27 oz": {
             category: "Water Bottle", section: "Drink", price: "~$25", tag: "Stainless Steel",
-            url: "https://www.amazon.com/dp/B07HLD18P5?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B0093IR4EK/?tag=sustanability-20",
             body: '<p>The Klean Kanteen Classic is the water bottle that started the reusable revolution. Made from 18/8 food-grade stainless steel with an electropolished interior, it contains zero coatings, zero linings, and zero plastic in the cap-to-body connection. It just works.</p><p>What makes the Classic special is its simplicity. There are no double walls to trap moisture, no vacuum seals to fail, no paint to chip. It dents instead of cracking. It scratches instead of shattering. After six years of daily use, most owners report it performs identically to day one.</p><h2>Why this makes the list</h2><p>The Klean Kanteen Classic is fully recyclable at end of life — not downcycled, not sent to a specialty facility, but genuinely recyclable in a standard municipal stream. The company is a certified B Corp and 1% for the Planet member. Every bottle sold replaces an estimated 167 single-use plastic bottles per year.</p><h2>What to know before buying</h2><p>The single-wall design means no insulation — your cold water will warm up over a few hours, and hot drinks will cool faster than a vacuum bottle. That is the trade-off for simplicity, weight, and recyclability. If you need insulation, look at the YETI Rambler or Stanley Classic instead.</p>',
             specs: [["Material", "18/8 food-grade stainless steel"], ["Weight", "5.3 oz (empty)"], ["Capacity", "27 oz / 800 ml"], ["Dishwasher Safe", "Yes"], ["Made In", "China (B Corp certified)"], ["Warranty", "Limited lifetime"], ["Plastic Parts", "None (stainless steel cap available)"]]
         },
         "Chemex Classic 6-Cup": {
             category: "Coffee", section: "Drink", price: "~$47", tag: "All Glass",
-            url: "https://www.amazon.com/dp/B000I1WP7W?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B0000YWF5E/?tag=sustanability-20",
             body: '<p>The Chemex has been making pour-over coffee since 1941, and the design has barely changed because it did not need to. Borosilicate glass body, a wood collar tied with a leather cord, and that is it. No plastic, no metal, no silicone gaskets. It sits in the permanent collection at MoMA.</p><p>The brewing method itself produces an exceptionally clean cup. The proprietary bonded filters are 20-30% heavier than standard paper filters, removing more oils and sediment. The result is a bright, nuanced coffee that highlights origin flavors rather than masking them.</p><h2>Why this makes the list</h2><p>Zero plastic in the entire product. The glass is infinitely recyclable. The wood collar is FSC-sourced. The leather tie is vegetable-tanned. Even the filters are compostable. It replaces pod machines, plastic drip brewers, and French presses with plastic frames.</p><h2>What to know before buying</h2><p>It is glass, so it can break if dropped on a hard surface. The proprietary filters cost more than standard cone filters (~$0.15 each vs $0.05). Hand wash recommended — the wood collar should not go in the dishwasher. Some people find pour-over too slow for weekday mornings, but most users say the ritual becomes the best part.</p>',
             specs: [["Material", "Borosilicate glass, wood, leather"], ["Capacity", "6 cups / 30 oz"], ["Dishwasher Safe", "Remove wood collar first"], ["Filter Type", "Chemex bonded (compostable)"], ["Made In", "USA (Chicopee, MA)"], ["Warranty", "Limited lifetime"], ["Plastic Parts", "None"]]
         },
         "YETI Rambler 20 oz Tumbler": {
             category: "Travel Mug", section: "Drink", price: "~$35", tag: "Insulated Steel",
-            url: "https://www.amazon.com/dp/B073WJHVCY?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B073WJMKHN/?tag=sustanability-20",
             body: '<p>The YETI Rambler is over-engineered in the best way. Double-wall vacuum insulation in 18/8 stainless steel keeps coffee hot for 6+ hours and ice water cold for the better part of a day. The DuraCoat color finish is applied without solvents and will not crack, peel, or fade.</p><p>The MagSlider lid is the one component that uses a small plastic magnet housing, but the body, interior, and exterior are entirely metal. It is dishwasher safe — lid and all — which is rare for insulated drinkware. The wide mouth fits standard ice cubes.</p><h2>Why this makes the list</h2><p>YETI products are designed to be repaired and reused for decades. Replacement lids and gaskets are sold individually so you never need to toss the whole tumbler. The stainless steel body is fully recyclable at end of life. This tumbler typically replaces hundreds of disposable coffee cups per year for a daily coffee drinker.</p><h2>What to know before buying</h2><p>The MagSlider lid contains a small plastic component — this is not a fully zero-plastic product. If that is a dealbreaker, the Klean Kanteen insulated line offers a fully steel-and-silicone lid option. The Rambler is also heavier than most tumblers at 0.9 lbs empty.</p>',
             specs: [["Material", "18/8 stainless steel, DuraCoat finish"], ["Insulation", "Double-wall vacuum"], ["Capacity", "20 oz / 591 ml"], ["Weight", "0.9 lbs"], ["Dishwasher Safe", "Yes"], ["Made In", "China"], ["Warranty", "5-year"], ["Plastic Parts", "MagSlider lid magnet housing"]]
         },
         "Stanley Classic Vacuum Bottle 1.5 qt": {
             category: "Thermos", section: "Drink", price: "~$40", tag: "Lifetime Warranty",
-            url: "https://www.amazon.com/dp/B000FZX93K?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B07L6M56VN/?tag=sustanability-20",
             body: '<p>The Stanley Classic has been keeping drinks hot since 1913 — over a century of the same fundamental design. 18/8 stainless steel construction with double-wall vacuum insulation that keeps liquids hot for 24 hours or cold for 32. The hammertone green finish is iconic for a reason: it works.</p><p>What sets the Stanley apart from modern competitors is its unmatched durability record. Reddit threads on r/BuyItForLife are filled with people posting Stanley thermoses inherited from grandparents — 30, 40, even 50 years old and still holding temperature. These are not marketing claims. They are verified by thousands of users.</p><h2>Why this makes the list</h2><p>This is the ultimate BIFL (buy it for life) thermos. The lifetime warranty is unconditional. No plastic liner. Fully recyclable stainless steel. One Stanley Classic replaces a lifetime of disposable cups and inferior thermoses that end up in landfills after 2-3 years. The math is simple: buy once.</p><h2>What to know before buying</h2><p>It is heavy — this is not an ultralight backpacking thermos. The pour-through stopper has a plastic component. The 1.5 qt size is large; consider the 1.1 qt if you want something more portable. The classic green finish shows scratches over time, though most owners consider this character.</p>',
             specs: [["Material", "18/8 stainless steel"], ["Insulation", "Double-wall vacuum"], ["Capacity", "1.5 qt / 48 oz"], ["Hot Retention", "24 hours"], ["Cold Retention", "32 hours"], ["Made In", "China (designed in Seattle)"], ["Warranty", "Lifetime"], ["Plastic Parts", "Pour-through stopper component"]]
         },
         "All-Clad D3 Stainless 10-Piece Set": {
             category: "Cookware", section: "Eat", price: "~$700", tag: "Made in USA",
-            url: "https://www.amazon.com/dp/B00005AL4S?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B005H8KD3E/?tag=sustanability-20",
             body: '<p>All-Clad D3 is the gold standard of stainless steel cookware. Three bonded layers — stainless steel exterior, aluminum core, stainless steel cooking surface — create even heat distribution without any non-stick coatings, PFAS chemicals, or plastic components. Every piece is made in Canonsburg, Pennsylvania.</p><p>The D3 line is the workhorse of professional and serious home kitchens. The stainless cooking surface develops a natural patina over time and, when properly heated and oiled, provides excellent food release. It will not warp, chip, flake, or degrade. It is fully compatible with induction, gas, electric, and oven use up to 600 degrees F.</p><h2>Why this makes the list</h2><p>Zero plastic anywhere in the construction — handles are riveted stainless steel. No PFAS, no PTFE, no questionable coatings that degrade into your food. This set replaces non-stick pans that need replacement every 2-5 years. All-Clad D3 lasts decades with zero performance loss. The stainless steel is fully recyclable at end of life.</p><h2>What to know before buying</h2><p>The $700 price tag is significant, but the per-year cost over a 20+ year lifespan is remarkably low compared to replacing non-stick sets every few years. Stainless requires learning proper heat and oil technique to prevent sticking — it is not non-stick out of the box. Hand washing is recommended for longevity, though it is dishwasher safe.</p>',
             specs: [["Material", "Tri-ply bonded stainless steel + aluminum"], ["Pieces", "10 (fry pans, saucepans, saute, stockpot)"], ["Oven Safe", "Up to 600\u00b0F"], ["Induction Compatible", "Yes"], ["Dishwasher Safe", "Yes (hand wash recommended)"], ["Made In", "USA (Canonsburg, PA)"], ["Warranty", "Limited lifetime"], ["Plastic Parts", "None"]]
         },
         "Ahimsa Stainless Steel Kids Set": {
             category: "Kids Cutlery", section: "Eat", price: "~$30", tag: "Recycled Steel",
-            url: "https://www.amazon.com/dp/PLACEHOLDER?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B0C6TX2V1L/?tag=sustanability-20",
             body: '<p>Ahimsa makes stainless steel dinnerware for kids that is actually designed for kids — not just shrunk-down adult plates. The pieces are lightweight, sized for small hands, and finished in vibrant rainbow colors achieved through a heat-treatment process that uses no paint, dyes, or coatings of any kind.</p><p>The steel is recycled medical-grade 304 stainless, which means it meets the highest purity standards for metals that contact food. The plates have divided sections, the bowls have a weighted base to resist tipping, and the cutlery has rounded edges. Every piece is designed to replace the plastic dinnerware that dominates the kids market.</p><h2>Why this makes the list</h2><p>Children eat an estimated 3 meals a day off plastic plates for roughly 8-10 years. That is thousands of exposures to potential microplastics and BPA/BPS compounds during critical developmental years. Ahimsa eliminates this entirely. The stainless steel is infinitely recyclable and will outlast childhood — many families pass sets to younger siblings or donate them.</p><h2>What to know before buying</h2><p>The rainbow finish can fade over time with aggressive dishwasher use, though the steel underneath remains perfectly safe. The price is higher than plastic alternatives, but the set will outlast dozens of plastic replacements. Some kids may not like the feel of metal initially if they are used to plastic — most adapt within a week.</p>',
             specs: [["Material", "304 recycled medical-grade stainless steel"], ["Pieces", "Fork, spoon, knife (set varies)"], ["Finish", "Heat-treated rainbow (no paint/dye)"], ["Dishwasher Safe", "Yes"], ["BPA/BPS Free", "Yes (no plastic at all)"], ["Age Range", "12 months+"], ["Warranty", "1 year"], ["Plastic Parts", "None"]]
         },
         "Bee's Wrap Assorted 3-Pack": {
             category: "Food Storage", section: "Eat", price: "~$18", tag: "Compostable",
-            url: "https://www.amazon.com/dp/B0126NU4MO?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B0126LMDFK/?tag=sustanability-20",
             body: '<p>Bee\'s Wrap replaces plastic cling wrap with something that actually makes sense: organic cotton infused with beeswax, organic jojoba oil, and tree resin. You warm it with your hands, mold it around food or over a bowl, and the beeswax holds its shape. When it wears out after about a year of regular use, you compost it.</p><p>The assorted 3-pack includes small (7" x 8"), medium (10" x 11"), and large (13" x 14") wraps that cover most kitchen storage needs — half an avocado, a block of cheese, a bowl of leftovers. They are washable in cool water with mild soap and air dry in minutes.</p><h2>Why this makes the list</h2><p>The average American family uses over 1,500 feet of plastic wrap per year. That is approximately 24 rolls of cling film going directly to landfill (plastic wrap is almost never recyclable). Three packs of Bee\'s Wrap per year eliminates this entirely. The product is GOTS certified organic, made in Vermont, and fully compostable at end of life.</p><h2>What to know before buying</h2><p>Bee\'s Wrap cannot be used with raw meat — the low-temperature wash means it cannot be sanitized adequately for raw proteins. It should not be microwaved or exposed to high heat. The beeswax coating diminishes over time and the wraps lose their stickiness after 6-12 months. Not suitable for vegans — look for plant-based wax alternatives from other brands.</p>',
             specs: [["Material", "Organic cotton, beeswax, jojoba oil, tree resin"], ["Sizes", "Small 7x8\", Medium 10x11\", Large 13x14\""], ["Lifespan", "6-12 months with regular use"], ["Washable", "Yes (cool water, mild soap)"], ["Compostable", "Yes, fully"], ["Made In", "USA (Burlington, VT)"], ["Certification", "GOTS certified organic"], ["Not For", "Raw meat, microwave, high heat"]]
         },
         "Lodge 10.25\" Cast Iron Skillet": {
             category: "Skillet", section: "Eat", price: "~$20", tag: "Made in USA",
-            url: "https://www.amazon.com/dp/B00006JSUA?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B00006JSUA?tag=sustanability-20",
             body: '<p>The Lodge cast iron skillet is the single most recommended kitchen item on r/BuyItForLife, and it is easy to see why. A single piece of cast iron, pre-seasoned with vegetable oil, that costs $20 and will outlast everything else in your kitchen. Lodge has been making these in South Pittsburg, Tennessee since 1896.</p><p>Cast iron is the original non-stick surface. A well-seasoned Lodge will release eggs, sear steaks, bake cornbread, and go from stovetop to oven without a second thought. The seasoning improves with every use — this is cookware that genuinely gets better over time. No coatings to degrade, no chemicals to worry about, no plastic handles to melt.</p><h2>Why this makes the list</h2><p>At $20, this is the highest-value sustainability swap on the entire site. One Lodge skillet replaces a lifetime of non-stick pans (which contain PFAS and need replacing every 2-5 years). Cast iron is infinitely recyclable. Many Lodge skillets in active use today are 50-100+ years old. The cost-per-year approaches zero.</p><h2>What to know before buying</h2><p>Cast iron is heavy — the 10.25" skillet weighs about 5 lbs. It requires some care: dry after washing, occasional re-seasoning with oil, and avoid prolonged soaking or dishwashers. It is reactive with highly acidic foods (tomato sauce, wine reductions) if the seasoning is thin. These are small trade-offs for a pan that will outlive you.</p>',
             specs: [["Material", "Cast iron, pre-seasoned with vegetable oil"], ["Weight", "5 lbs"], ["Diameter", "10.25 inches"], ["Oven Safe", "Yes (any temperature)"], ["Induction Compatible", "Yes"], ["Made In", "USA (South Pittsburg, TN)"], ["Warranty", "Limited lifetime"], ["Plastic Parts", "None"]]
         },
         "Le Creuset Signature Dutch Oven": {
             category: "Dutch Oven", section: "Eat", price: "~$370", tag: "Lifetime Warranty",
-            url: "https://www.amazon.com/dp/B0076NOGPY?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B00VA5HG0Q/?tag=sustanability-20",
             body: '<p>The Le Creuset Signature Dutch Oven is the most gifted, inherited, and recommended piece of cookware on Reddit, and arguably in the world. Enameled cast iron — a cast iron body coated in porcelain enamel — that distributes heat evenly, retains it beautifully, and transitions from stovetop to oven to table.</p><p>The enamel interior means no seasoning required and no reactivity with acidic foods. You can braise, bake bread, make soup, simmer sauces, and deep fry all in one vessel. The tight-fitting lid traps moisture for self-basting. Each piece is hand-inspected by 30 craftspeople and passes 10+ quality checks before leaving the foundry in Fresnoy-le-Grand, France.</p><h2>Why this makes the list</h2><p>Zero plastic. Lifetime warranty that Le Creuset actually honors — Reddit is full of stories of 20-year-old pots being replaced free of charge. The enamel will not chip, crack, or stain under normal use. This pot replaces multiple pieces of inferior cookware and lasts generations. The secondary market for vintage Le Creuset is thriving, meaning these pots hold value.</p><h2>What to know before buying</h2><p>The price is the main barrier. A 5.5 qt round runs approximately $370 at retail. Sales happen regularly (20-40% off at outlets and during major holidays). The pot is heavy — 11+ lbs — which can be difficult for some users. The enamel can chip if subjected to thermal shock (never move from freezer to hot oven directly). Hand washing is recommended.</p>',
             specs: [["Material", "Enameled cast iron"], ["Popular Size", "5.5 qt Round"], ["Weight", "~11.5 lbs (5.5 qt)"], ["Oven Safe", "Up to 500\u00b0F"], ["Induction Compatible", "Yes"], ["Made In", "France (Fresnoy-le-Grand)"], ["Warranty", "Lifetime"], ["Plastic Parts", "None"]]
         },
         "John Boos Maple Edge-Grain Block": {
             category: "Cutting Board", section: "Eat", price: "~$120", tag: "Solid Wood",
-            url: "https://www.amazon.com/dp/B000NJBFXC?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B0000CFV4K/?tag=sustanability-20",
             body: '<p>John Boos has been making butcher blocks in Effingham, Illinois since 1887. The Maple Edge-Grain Block is their signature cutting board — solid North American hard rock maple, edge-grain construction, finished with their proprietary Boos Block Mystery Oil (a food-safe mineral oil blend). No plastic, no bamboo composites with formaldehyde glues, no silicone feet — just wood.</p><p>Edge-grain construction means the board is made from strips of maple glued along their edges, creating a surface that is hard, durable, and kind to knife edges. The hard maple is naturally antimicrobial — studies have shown that wood surfaces kill bacteria more effectively than plastic cutting boards, which harbor bacteria in knife grooves.</p><h2>Why this makes the list</h2><p>Plastic cutting boards are one of the largest overlooked sources of microplastics in the kitchen. A single plastic cutting board can shed millions of microplastic particles per year into your food. The Boos block eliminates this entirely. It is NSF certified for commercial use, fully repairable (sand and re-oil), and will last 20+ years with basic care.</p><h2>What to know before buying</h2><p>Wood boards require occasional oiling (monthly for heavy use, quarterly for light). They should not go in the dishwasher. They are heavy — the 18x12" board weighs about 8 lbs. The upfront cost is higher than plastic, but considering a Boos block lasts decades while plastic boards need replacing every 1-2 years, the lifetime cost is comparable or lower.</p>',
             specs: [["Material", "North American hard rock maple"], ["Construction", "Edge-grain"], ["Popular Size", "18\" x 12\" x 1.5\""], ["Weight", "~8 lbs"], ["Finish", "Boos Block Mystery Oil (food-safe mineral oil)"], ["NSF Certified", "Yes"], ["Made In", "USA (Effingham, IL)"], ["Warranty", "Limited lifetime"], ["Plastic Parts", "None"]]
         },
         "Ethique Botanica Deodorant Bar": {
             category: "Deodorant", section: "Clean", price: "~$13", tag: "Zero Waste",
-            url: "https://www.amazon.com/dp/PLACEHOLDER?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B07TN3W1KX/?tag=sustanability-20",
             body: '<p>Ethique makes concentrated solid beauty bars that eliminate plastic packaging entirely. The Botanica deodorant bar comes wrapped in compostable packaging — no plastic tube, no plastic cap, no plastic anything. It is applied directly to clean skin and lasts 3-4 months of daily use, which is 2-3x longer than a standard stick deodorant.</p><p>The formula is aluminum-free, vegan, palm oil free, and cruelty free. It uses magnesium hydroxide and zinc oxide as active odor-fighting ingredients rather than aluminum salts. The scent is subtle — a blend of essential oils that fades within an hour rather than projecting all day.</p><h2>Why this makes the list</h2><p>The average person uses 3-4 deodorant sticks per year. Over a lifetime, that is 200+ plastic tubes going to landfill (deodorant tubes are almost never recyclable due to mixed materials). One Ethique bar replaces 1-2 plastic tubes. The company is certified B Corp, carbon neutral, and has prevented over 15 million plastic containers from being manufactured since founding.</p><h2>What to know before buying</h2><p>Solid deodorant bars require a brief adjustment period if you are switching from antiperspirant — your body may sweat more for 1-2 weeks during the transition. The bar can feel waxy on initial application. For heavy sweating or high-humidity climates, some users find aluminum-free formulas less effective than traditional antiperspirants. Store in a dry place between uses.</p>',
             specs: [["Format", "Solid bar"], ["Weight", "2.47 oz / 70g"], ["Lifespan", "3-4 months daily use"], ["Active Ingredients", "Magnesium hydroxide, zinc oxide"], ["Aluminum Free", "Yes"], ["Vegan", "Yes"], ["Packaging", "Compostable wrapper"], ["Certification", "B Corp, carbon neutral"], ["Plastic Parts", "None"]]
         },
         "HiBAR Solid Shampoo + Conditioner": {
             category: "Shampoo", section: "Clean", price: "~$15", tag: "Plastic-Free",
-            url: "https://www.amazon.com/dp/PLACEHOLDER?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B07VQC79W4/?tag=sustanability-20",
             body: '<p>HiBAR makes salon-quality solid shampoo and conditioner bars that produce a rich, satisfying lather without a plastic bottle in sight. Each bar is equivalent to approximately 2 standard 12 oz plastic shampoo bottles. The bars come in cardboard packaging that is fully recyclable or compostable.</p><p>The formulas are sulfate-free, paraben-free, phthalate-free, and silicone-free. HiBAR offers different formulations for different hair types — Maintain (normal), Volumize (fine/thin), Moisturize (dry/curly), and Soothe (sensitive scalp). The bars lather well even in hard water, which is a common complaint with solid shampoos from other brands.</p><h2>Why this makes the list</h2><p>The shampoo and conditioner industry produces over 550 million plastic bottles per year in the US alone. Most are not recycled. A pair of HiBAR bars lasts 2-3 months and eliminates 4 plastic bottles in that time. Over a year, one person switching to HiBAR prevents 16+ plastic bottles from entering the waste stream. Multiply by a household.</p><h2>What to know before buying</h2><p>Solid bars require a transition period of 1-2 weeks as your hair adjusts to the absence of silicones (which coat hair in liquid products). The bars need to be stored on a well-draining soap dish — sitting in water will cause them to dissolve prematurely. Some users with very long or thick hair find they need to swipe the bar more times than expected to get adequate coverage.</p>',
             specs: [["Format", "Solid bar"], ["Weight", "3.2 oz each"], ["Equivalent To", "~2 plastic bottles per bar"], ["Sulfate Free", "Yes"], ["Silicone Free", "Yes"], ["Vegan", "Yes"], ["Packaging", "Recyclable/compostable cardboard"], ["Available Types", "Maintain, Volumize, Moisturize, Soothe"], ["Plastic Parts", "None"]]
         },
         "Bite Toothpaste Bits": {
             category: "Oral Care", section: "Clean", price: "~$12", tag: "Refillable",
-            url: "https://www.amazon.com/dp/PLACEHOLDER?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B0B8F3924K/?tag=sustanability-20",
             body: '<p>Bite Toothpaste Bits are dry toothpaste tablets that come in a refillable glass jar. You pop one in your mouth, bite down, add your wet toothbrush, and brush normally. They foam up just like conventional toothpaste but without the plastic tube, without the water weight for shipping, and without the preservatives needed for wet formulas.</p><p>Available with or without fluoride (the fluoride version uses sodium fluoride at the standard 0.243% concentration). Ingredients are clean and minimal — no SLS, no parabens, no artificial sweeteners, no titanium dioxide. The mint flavor is derived from real peppermint oil. Refills ship in compostable pouches.</p><h2>Why this makes the list</h2><p>Over 1 billion plastic toothpaste tubes are thrown away globally each year. Toothpaste tubes are virtually unrecyclable because they are made from mixed materials (plastic, aluminum, and residual toothpaste). Bite eliminates this problem entirely. The glass jar is infinitely refillable, and the refill pouches are compostable. One jar replaces approximately 3-4 plastic tubes per year.</p><h2>What to know before buying</h2><p>The texture is different from traditional toothpaste — it starts as a dry crunch before foaming. Most people adjust within 3-5 uses. The tablets do not contain the abrasive micro-silica found in some whitening toothpastes, so whitening effectiveness may differ. The per-brush cost is slightly higher than conventional toothpaste (~$0.10 per brush vs ~$0.03 for a standard tube).</p>',
             specs: [["Format", "Dry tablet"], ["Count", "~124 bits per jar (2 months supply)"], ["Fluoride", "Available with or without"], ["SLS Free", "Yes"], ["Container", "Refillable glass jar"], ["Refills", "Compostable pouch"], ["ADA Accepted", "Fluoride version"], ["Plastic Parts", "None"]]
         },
         "Merkur 34C Heavy Duty Safety Razor": {
             category: "Shaving", section: "Clean", price: "~$40", tag: "Zero Plastic",
-            url: "https://www.amazon.com/dp/B002A8JO1Q?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B002A8JO1Q?tag=sustanability-20",
             body: '<p>The Merkur 34C is a double-edge safety razor made from solid chrome-plated brass in Solingen, Germany — the historic center of world blade-making. One razor, used for the rest of your life. The handle is a single piece of cast metal that will never flex, crack, or degrade. It is the most recommended razor on Reddit by a wide margin.</p><p>The shaving experience is markedly different from cartridge razors. A single exposed blade cuts at the skin level rather than pulling and cutting below the surface like multi-blade cartridges, resulting in less irritation, fewer ingrown hairs, and a closer shave for most users. The learning curve is about 2-3 shaves.</p><h2>Why this makes the list</h2><p>Disposable razors and cartridge refills are one of the most wasteful personal care products in existence. Americans throw away 2 billion razors per year — all unrecyclable mixed plastic and metal. The Merkur replaces all of them. Replacement double-edge blades cost $0.08-$0.15 each, are made from a single material (stainless steel), and are fully recyclable in a blade bank.</p><h2>What to know before buying</h2><p>There is a learning curve. Cartridge razors are designed to be pressed hard against the skin; safety razors require a light touch and proper angle (approximately 30 degrees). Expect a nick or two during the first week. A shaving brush and proper lather (rather than canned foam in a plastic can) dramatically improve the experience. The initial $40 investment pays for itself within 3-4 months compared to cartridge refill costs.</p>',
             specs: [["Material", "Chrome-plated brass (solid)"], ["Weight", "2.7 oz"], ["Handle Length", "3 inches"], ["Blade Type", "Standard double-edge (any brand)"], ["Blade Cost", "$0.08-$0.15 each"], ["Blade Recyclable", "Yes (stainless steel)"], ["Made In", "Germany (Solingen)"], ["Warranty", "Manufacturer guarantee"], ["Plastic Parts", "None"]]
         },
         "Coyuchi Organic Percale Sheets": {
             category: "Bedding", section: "Live", price: "~$198", tag: "Organic Cotton",
-            url: "https://www.amazon.com/dp/PLACEHOLDER?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B01N06EXWE/?tag=sustanability-20",
             body: '<p>Coyuchi makes organic cotton bedding that is certified to the Global Organic Textile Standard (GOTS) — the world\'s most rigorous organic textile certification. The percale sheets are 100% organic cotton, with a crisp, cool hand-feel that improves with every wash. No synthetic fibers, no polyester blends, no chemical finishes.</p><p>Percale is a plain weave with a one-over, one-under pattern that creates a matte, breathable fabric. It sleeps cooler than sateen and develops a beautiful softness over time without pilling. The 300-thread-count is the sweet spot for percale — dense enough for durability, open enough for airflow.</p><h2>Why this makes the list</h2><p>Most sheets contain polyester blends that shed microplastic fibers with every wash — fibers that flow through wastewater treatment and into waterways. You spend 8 hours a night with your face pressed against your sheets; the material matters. Coyuchi\'s organic cotton eliminates microplastic shedding entirely. The company also runs a take-back program (2nd Home) where used Coyuchi linens are recycled rather than landfilled.</p><h2>What to know before buying</h2><p>Organic percale sheets will wrinkle — this is the nature of pure cotton without synthetic finishes. Some people love the lived-in look; others may want to iron or tumble dry for a smoother appearance. The $198 price is for a queen set, which is premium but not luxury-tier. They last 5-7+ years with proper care, bringing the annual cost to roughly $28-$40.</p>',
             specs: [["Material", "100% GOTS certified organic cotton"], ["Weave", "Percale (plain weave)"], ["Thread Count", "300"], ["Set Includes", "Flat sheet, fitted sheet, 2 pillowcases"], ["Certifications", "GOTS, OEKO-TEX, Fair Trade"], ["Made In", "India (Fair Trade certified factory)"], ["Care", "Machine wash warm, tumble dry low"], ["Plastic Parts", "None (even the packaging)"]]
         },
         "Blueland Clean Essentials Kit": {
             category: "Cleaning", section: "Live", price: "~$39", tag: "Refillable",
-            url: "https://www.amazon.com/dp/PLACEHOLDER?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B09W7TD9C4/?tag=sustanability-20",
             body: '<p>Blueland\'s Clean Essentials Kit includes three reusable glass-like bottles (actually Tritan, a durable BPA-free material) and three dissolvable cleaning tablets — multi-surface cleaner, bathroom cleaner, and glass cleaner. You fill the bottles with water, drop in a tablet, wait 10 minutes, and you have a full bottle of cleaning solution. When it runs out, you drop in another tablet. The bottle never gets thrown away.</p><p>The tablets are packaged in compostable wrappers. The formulas are EPA Safer Choice certified, meaning they meet strict safety standards for both human health and the environment. They perform comparably to conventional spray cleaners in independent testing.</p><h2>Why this makes the list</h2><p>The average household buys 20+ plastic cleaning spray bottles per year. Almost none are recycled because they contain chemical residue. Blueland eliminates the single-use bottle entirely. Refill tablets cost $2 each and ship in a compostable wrapper that weighs almost nothing — reducing shipping emissions by 90% compared to liquid cleaners. Over 5 years, one kit prevents 100+ plastic bottles from being manufactured.</p><h2>What to know before buying</h2><p>The Forever Bottles are made from Tritan (a type of plastic) — not glass — which some zero-waste purists may note. Blueland chose Tritan for shatter resistance and weight. The cleaning tablets require warm water to dissolve properly; cold water can leave residue. For heavy-duty cleaning (oven grease, deep mold), you may still need a stronger concentrated cleaner.</p>',
             specs: [["Kit Includes", "3 Forever Bottles + 3 cleaning tablets"], ["Bottle Material", "Tritan (BPA-free, shatter-resistant)"], ["Tablet Packaging", "Compostable wrapper"], ["Formulas", "Multi-surface, bathroom, glass + mirror"], ["EPA Safer Choice", "Yes"], ["Refill Cost", "$2 per tablet"], ["Made In", "USA"], ["Plastic Parts", "Forever Bottles (Tritan — designed for permanent reuse)"]]
         },
         "Swedish Wholesale Dishcloths": {
             category: "Kitchen Cloth", section: "Live", price: "~$6", tag: "Compostable",
-            url: "https://www.amazon.com/dp/B004XLCFP2?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B07GX6TRQX/?tag=sustanability-20",
             body: '<p>Swedish dishcloths (also called sponge cloths) are made from a blend of cellulose (wood pulp) and cotton — two natural, compostable materials. One cloth absorbs 20x its weight in liquid and replaces an estimated 17 rolls of paper towels over its lifespan. They start stiff when dry and become soft and pliable when wet.</p><p>Swedish Wholesale sells them in packs of 10 for around $6, which makes them one of the cheapest sustainable swaps available. They are machine washable (up to 200 cycles), microwave-safe for sanitizing, and come in a variety of colors and patterns. When a cloth finally wears out after 6-9 months, you throw it in the compost.</p><h2>Why this makes the list</h2><p>Paper towels are a $12 billion industry in the US, and the average household uses 80+ rolls per year — all of which become waste after a single use. Swedish dishcloths break this cycle entirely. At $6 for a 10-pack that lasts a year, the financial savings alone are significant (vs $80-$120/year on paper towels). The environmental math is even more compelling: fewer trees harvested, less water and energy for manufacturing, and zero landfill waste.</p><h2>What to know before buying</h2><p>Swedish dishcloths can develop odor if not dried properly between uses. The solution is simple: wring them out thoroughly and drape them over the faucet or a drying rack. Microwaving a damp cloth for 60 seconds kills bacteria effectively. They are not as absorbent as a thick terry cloth towel for large spills — they excel at countertop wiping, dish drying, and general kitchen cleanup.</p>',
             specs: [["Material", "Cellulose (wood pulp) + cotton"], ["Pack Size", "10 cloths"], ["Absorption", "20x its weight in liquid"], ["Replaces", "~17 rolls of paper towels per cloth"], ["Machine Washable", "Yes (200+ cycles)"], ["Compostable", "Yes, fully"], ["Lifespan", "6-9 months per cloth"], ["Made In", "Europe"], ["Plastic Parts", "None"]]
         },
         "Meliora Cleaning Products": {
             category: "Laundry & Cleaning", section: "Live", price: "~$15", tag: "Zero Waste",
-            url: "https://www.amazon.com/dp/PLACEHOLDER?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B01DC1D4JM/?tag=sustanability-20",
             body: '<p>Meliora (Latin for "better") makes cleaning products with a radical philosophy: every ingredient is listed plainly on the label, and every product contains 5 or fewer ingredients. Their flagship products — laundry powder, all-purpose cleaner, and dish soap — come in compostable cardboard packaging with zero plastic. No bottles, no pumps, no shrink wrap.</p><p>The laundry powder uses sodium bicarbonate, sodium carbonate, and coconut oil-based soap as its three active ingredients. That is it. No optical brighteners, no synthetic fragrances, no preservatives. It is effective in all water temperatures and compatible with HE machines. The all-purpose cleaner comes as a powder you mix with water in your own spray bottle.</p><h2>Why this makes the list</h2><p>Meliora is EWG Verified (highest safety standard from the Environmental Working Group), Made Safe certified, Leaping Bunny certified, and a certified B Corp. They are one of the only cleaning brands that achieves genuinely zero plastic packaging across their entire product line. The laundry powder eliminates the heavy plastic jugs that liquid detergent requires — one 64-load box weighs 35 oz and replaces a 100 oz plastic jug.</p><h2>What to know before buying</h2><p>Powder detergent requires slightly different habits than liquid — you add the powder before clothes, not after. In cold water washes, pre-dissolving the powder in warm water can improve performance. The unscented version is truly unscented (no masking fragrances), which some people love and others find too "clean-smelling." The all-purpose cleaner is mild — for heavy degreasing, you may need a stronger solution.</p>',
             specs: [["Products", "Laundry powder, all-purpose cleaner, dish soap, soap stick"], ["Ingredients", "3-5 per product (all listed)"], ["Packaging", "Compostable cardboard"], ["Certifications", "EWG Verified, Made Safe, B Corp, Leaping Bunny"], ["HE Compatible", "Yes"], ["Loads Per Box", "64 (laundry powder)"], ["Made In", "USA (Chicago, IL)"], ["Plastic Parts", "None (zero plastic across entire line)"]]
         },
         "Osprey Atmos AG 65": {
             category: "Pack", section: "Move", price: "~$350", tag: "Lifetime Repair",
-            url: "https://www.amazon.com/dp/B09TKSZYL7?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B086HMX9DB/?tag=sustanability-20",
             dark: true,
             body: '<p>The Osprey Atmos AG 65 is a full-featured backpacking pack with a suspended mesh backpanel that creates an air gap between your back and the pack. The "AG" stands for Anti-Gravity, and it lives up to the name — even with 40 lbs of gear, the load distribution feels remarkably balanced. The main body fabric is made from 100% recycled materials.</p><p>What separates Osprey from virtually every other pack manufacturer is their All Mighty Guarantee: if anything breaks, they repair it for free, for the lifetime of the product, no questions asked. Not "we\'ll give you a discount on a new one." Actual repair. Osprey employs a full-time repair team that fixes zippers, replaces buckles, re-stitches seams, and replaces frames — keeping packs out of landfills.</p><h2>Why this makes the list</h2><p>The outdoor gear industry generates enormous waste through planned obsolescence. Packs with non-replaceable frames, glued-in hipbelts, and proprietary buckles force consumers to buy new every 3-5 years. Osprey designed the Atmos to be fully repairable. Every component can be replaced. The All Mighty Guarantee means your one purchase is truly your last. The recycled fabric body further reduces virgin material demand.</p><h2>What to know before buying</h2><p>The AG suspension system adds some width to the pack, which can be an issue on narrow trails or in tight scrambles. At 4 lbs 9 oz, it is not an ultralight pack — weight-conscious hikers may want something lighter for fast-and-light trips. The 65L size is designed for multi-day trips; for day hikes, look at the Osprey Daylite or Talon series (same guarantee). Try it on with weight at an outfitter before buying online.</p>',
             specs: [["Material", "100% recycled main body fabric"], ["Volume", "65 liters"], ["Weight", "4 lbs 9 oz"], ["Suspension", "Anti-Gravity (AG) mesh"], ["Max Load", "50 lbs recommended"], ["Sizes", "S/M, L/XL"], ["Made In", "Vietnam"], ["Warranty", "All Mighty Guarantee (lifetime repair)"], ["Plastic Parts", "Buckles, zippers (all replaceable)"]]
         },
         "Darn Tough Micro Crew": {
             category: "Socks", section: "Move", price: "~$20", tag: "Lifetime Warranty",
-            url: "https://www.amazon.com/dp/B074BRJCVP?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B000XIFUZ4/?tag=sustanability-20",
             dark: true,
             body: '<p>Darn Tough makes merino wool socks in Northfield, Vermont with one promise: if they ever wear out, you get a new pair. No receipt needed, no time limit, no questions. This unconditional lifetime warranty is not marketing — it is a reflection of how over-engineered these socks are. They use fine-gauge merino wool, nylon reinforcement in high-wear zones, and a seamless toe closure.</p><p>Merino wool is naturally antimicrobial, moisture-wicking, and temperature-regulating. You can wear Darn Tough socks for multiple days in a row without odor — a claim that sounds absurd until you try it on a backpacking trip. The Micro Crew height is the most versatile: tall enough for hiking boots, short enough for everyday wear.</p><h2>Why this makes the list</h2><p>The average American buys 10-12 pairs of socks per year, most of which are cotton-polyester blends that wear through in months and end up in landfill. One pair of Darn Tough socks lasts years of heavy use, and when they finally do wear through, the warranty replaces them for free. The total sock consumption drops dramatically. The merino wool is biodegradable at end of life (though given the warranty, that day may never come).</p><h2>What to know before buying</h2><p>At $20-$28 per pair, the upfront cost is 3-4x a standard sock. Most people start with 2-3 pairs and gradually replace their entire drawer. The merino can felt if machine dried on high heat — tumble dry low or air dry. Some people with wool sensitivities may find merino itchy, though most do not (merino fibers are much finer than traditional wool). Sizing runs true — order your shoe size.</p>',
             specs: [["Material", "Merino wool, nylon, Lycra spandex"], ["Weight", "Midweight cushion"], ["Height", "Micro Crew (mid-calf)"], ["Antimicrobial", "Yes (natural merino property)"], ["Seamless Toe", "Yes"], ["Made In", "USA (Northfield, VT)"], ["Warranty", "Unconditional lifetime"], ["Care", "Machine wash warm, tumble dry low"], ["Plastic Parts", "None (nylon reinforcement is for durability)"]]
         },
         "Patagonia Capilene Cool Merino": {
             category: "Layer", section: "Move", price: "~$79", tag: "Worn Wear",
-            url: "https://www.amazon.com/dp/PLACEHOLDER?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B0BV1XRMS6/?tag=sustanability-20",
             dark: true,
             body: '<p>The Patagonia Capilene Cool Merino is a base layer that blends 65% responsibly sourced merino wool with 35% recycled polyester. The result is a shirt that regulates temperature like wool but dries significantly faster — a combination that makes it ideal for both high-output trail days and everyday wear.</p><p>Patagonia\'s Worn Wear program is central to why this piece makes the list. When it eventually wears out (and it will take years), Patagonia will repair it for free or for a nominal fee. If it is beyond repair, they will recycle it. You can also buy pre-owned Capilene pieces through the Worn Wear marketplace at significant discounts.</p><h2>Why this makes the list</h2><p>The textile industry is the second-largest polluter in the world. Fast fashion synthetic base layers are designed to be replaced seasonally. Patagonia designs for longevity and backs it with repair infrastructure. The recycled polyester content diverts plastic from landfills, and the merino is sourced from farms that meet Patagonia\'s animal welfare standards. The Worn Wear program keeps garments in circulation for as long as possible.</p><h2>What to know before buying</h2><p>This is not a zero-plastic product — the 35% recycled polyester is still a synthetic. However, using recycled polyester prevents new plastic production and gives existing plastic a second life. The merino/poly blend will shed some microfibers in the wash; using a Guppyfriend wash bag or Cora Ball can capture up to 90% of these. The fit is slim/athletic — size up if you prefer a relaxed fit.</p>',
             specs: [["Material", "65% merino wool, 35% recycled polyester"], ["Weight", "150 g/m\u00b2 (lightweight)"], ["Odor Resistance", "Excellent (merino)"], ["Dry Time", "Fast (polyester blend)"], ["UPF Rating", "UPF 20"], ["Fair Trade Certified", "Yes"], ["Made In", "Varies (Fair Trade factory)"], ["Warranty", "Ironclad Guarantee + Worn Wear repairs"], ["Plastic Parts", "35% recycled polyester content"]]
         },
         "Red Wing Heritage Iron Ranger": {
             category: "Boots", section: "Move", price: "~$350", tag: "Made in USA",
-            url: "https://www.amazon.com/dp/PLACEHOLDER?tag=YOURTAG-20",
+            url: "https://www.amazon.com/dp/B0032UYNKI/?tag=sustanability-20",
             dark: true,
             body: '<p>The Red Wing Iron Ranger is a Goodyear-welted, full-grain leather boot made in Red Wing, Minnesota since 1905. Goodyear welt construction means the upper is stitched (not glued) to the sole through a welt strip — making the boot fully resoleable. When the sole wears down after years of use, a cobbler stitches on a new one for $80-$120, and the boot continues for another decade. This is the anti-disposable shoe.</p><p>The full-grain leather (most popular in Amber Harness or Copper Rough &amp; Tough) develops a rich patina unique to each wearer. The triple-stitched seams resist failure. The Vibram mini-lug sole provides grip on varied terrain. These boots are heavy and require a break-in period, but once broken in, they conform to your feet like nothing else.</p><h2>Why this makes the list</h2><p>The footwear industry produces 20+ billion pairs of shoes annually, and the vast majority end up in landfill within 1-3 years. Sneakers and fashion boots are largely unrepairable — glued soles, synthetic uppers, foam midsoles that crumble. The Iron Ranger is designed to be maintained indefinitely: condition the leather, replace the laces, resole when needed. Reddit users regularly post Iron Rangers with 10-20+ years of daily wear. The per-year cost plummets over time.</p><h2>What to know before buying</h2><p>The break-in period is real — expect 2-4 weeks of stiffness and potential hot spots before the leather molds to your foot. Red Wing retail stores offer free sizing consultations (highly recommended, as sizing differs from sneakers). The boots are heavy (~3.5 lbs per pair) and not ideal for long-distance hiking. Budget $20-$30/year for leather conditioner and replacement laces. Not vegan — these are leather boots through and through.</p>',
             specs: [["Material", "Full-grain leather upper, Vibram mini-lug sole"], ["Construction", "Goodyear welt (fully resoleable)"], ["Weight", "~3.5 lbs per pair"], ["Sole", "Vibram 430 Mini-lug"], ["Break-In Period", "2-4 weeks"], ["Resole Cost", "$80-$120 at a cobbler"], ["Made In", "USA (Red Wing, MN)"], ["Warranty", "Limited (defects in materials/workmanship)"], ["Plastic Parts", "None"]]
@@ -2421,7 +2472,7 @@ a:hover { color: var(--accent-warm); }
             '<p class="detail-price">' + p.price + '</p>' +
             '<div class="detail-body">' + p.body + '</div>' +
             specsHTML +
-            '<a class="detail-cta" href="' + (p.url || '#') + '" target="_blank" rel="noopener noreferrer sponsored">View on retailer site &rarr;</a>';
+            '<a class="detail-cta" href="' + (p.url || '#') + '" target="_blank" rel="noopener noreferrer sponsored">View on Amazon &rarr;</a>';
 
         // Show the product detail page
         document.querySelectorAll('.page').forEach(function (el) { el.classList.remove('is-active'); });
