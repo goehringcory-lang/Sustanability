@@ -317,41 +317,126 @@ a:hover { color: var(--accent-warm); }
     background: rgba(255,255,255,0.12);
 }
 
-/* ── Category Row (light version of feature cards) ─────────────────── */
+/* ── Category Index (editorial table of contents) ──────────────────── */
 
-.category-row {
+.cat-index { padding: 7rem 3rem 8rem; background: var(--bg); }
+.cat-index-inner { max-width: 1200px; margin: 0 auto; }
+
+.cat-index-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--text);
+}
+.cat-index-head .eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+.cat-index-head h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    color: var(--text);
+    font-weight: 400;
+    font-style: italic;
+    margin: 0;
+    max-width: 620px;
+}
+
+.cat-index-list { margin: 0; padding: 0; }
+
+.cat-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 3rem;
+    grid-template-columns: 3.5rem minmax(180px, 17rem) 1fr 6rem;
+    align-items: baseline;
+    column-gap: 2.5rem;
+    padding: 2.1rem 0.35rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    transition: padding-left 0.5s var(--ease-out);
 }
 
-.category-row .feature-card {
-    padding: 2rem;
-    border-radius: var(--radius-md);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    transition: all 0.3s var(--ease-out);
+.cat-num {
+    font-family: Georgia, serif;
+    font-size: 0.92rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-secondary);
+    letter-spacing: 0.04em;
+    transition: color 0.3s;
 }
 
-.category-row .feature-card:hover {
-    border-color: var(--stone-mid);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+.cat-name {
+    font-family: Georgia, serif;
+    font-size: clamp(2rem, 4.2vw, 3.15rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    color: var(--text);
+    position: relative;
+    display: inline-block;
+    justify-self: start;
+}
+.cat-name::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.14em;
+    height: 2px;
+    width: 100%;
+    background: var(--accent);
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: transform 0.55s var(--ease-out);
 }
 
-.category-row .feature-card h3 { color: var(--text); font-size: 0.95rem; margin-bottom: 0.5rem; }
-.category-row .feature-card p { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; }
+.cat-teaser {
+    font-family: var(--font-display);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 44ch;
+}
 
-.category-row .feature-icon svg { stroke: var(--stone-dark) !important; }
-.category-row .feature-icon svg path[fill="#A85121"] { fill: var(--accent) !important; }
-.category-row .feature-icon svg line[stroke="#A85121"] { stroke: var(--accent) !important; }
-.category-row .feature-icon svg path[stroke="#A85121"] { stroke: var(--accent) !important; }
-.category-row .feature-icon svg polygon[fill="#A85121"] { fill: var(--accent) !important; }
-.category-row .feature-icon svg polygon[fill="#fff"] { fill: var(--stone-dark) !important; }
+.cat-count {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
 
-@media (max-width: 900px) { .category-row { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .category-row { grid-template-columns: 1fr; } }
+.cat-row:hover { padding-left: 1.75rem; }
+.cat-row:hover .cat-num,
+.cat-row:hover .cat-count { color: var(--accent); }
+.cat-row:hover .cat-name::after { transform: scaleX(1); }
+
+@media (max-width: 900px) {
+    .cat-index { padding: 4.5rem 1.5rem 5rem; }
+    .cat-row {
+        grid-template-columns: 2.5rem 1fr;
+        row-gap: 0.4rem;
+        column-gap: 1rem;
+        padding: 1.6rem 0.25rem;
+    }
+    .cat-teaser { grid-column: 2; max-width: none; }
+    .cat-count { grid-column: 2; text-align: left; }
+}
 
 /* ── Featured Picks ────────────────────────────────────────────────── */
 
@@ -1634,56 +1719,50 @@ a:hover { color: var(--accent-warm); }
         </div>
     </section>
 
-    <!-- ── CATEGORIES ────────────────────────────────────────────────── -->
-    <section class="section">
-        <div class="section-inner">
-            <p class="section-label">Browse by category</p>
-            <h2 class="section-title" style="max-width:680px;">Every essential of being human, done sustainably.</h2>
-            <p class="section-subtitle">We all drink, eat, sleep, clean, and move. These aren't lifestyle upgrades — they're the baseline. We find the zero-plastic, zero-waste way to do each one.</p>
-
-            <div class="category-row">
-                <div class="feature-card" style="cursor:pointer;" onclick="goToSection('products','section-drink')">
-                    <div class="feature-icon" style="background:none;width:72px;height:72px;padding:0;">
-                        <svg viewBox="0 0 120 120" fill="none" style="width:100%;height:100%;"><circle cx="60" cy="60" r="58" fill="#F7F6F4" stroke="#C8C5BF" stroke-width="1.5"/><path d="M60 28C60 28 40 52 40 68C40 79.046 48.954 88 60 88C71.046 88 80 79.046 80 68C80 52 60 28 60 28Z" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M46 72C50 68 54 70 58 68C62 66 66 70 74 68" stroke="#A85121" stroke-width="2" stroke-linecap="round"/></svg>
-                    </div>
-                    <h3>Drink</h3>
-                    <p>Water bottles, coffee makers, tumblers. What touches your lips every single day.</p>
-                </div>
-                <div class="feature-card" style="cursor:pointer;" onclick="goToSection('products','section-eat')">
-                    <div class="feature-icon" style="background:none;width:72px;height:72px;padding:0;">
-                        <svg viewBox="0 0 120 120" fill="none" style="width:100%;height:100%;"><circle cx="60" cy="60" r="58" fill="#F7F6F4" stroke="#C8C5BF" stroke-width="1.5"/><path d="M42 32V50M42 50V88M42 50C42 50 36 50 36 42V32M42 50C42 50 48 50 48 42V32" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="42" y1="32" x2="42" y2="42" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round"/><path d="M78 32C78 32 84 34 84 48C84 54 81 56 78 56V88" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="78" y1="32" x2="78" y2="56" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round"/><circle cx="60" cy="60" r="3" fill="#A85121"/></svg>
-                    </div>
-                    <h3>Eat</h3>
-                    <p>Cookware, utensils, food storage, kids' plates. The kitchen, rebuilt without plastic.</p>
-                </div>
-                <div class="feature-card" style="cursor:pointer;" onclick="goToSection('products','section-clean')">
-                    <div class="feature-icon" style="background:none;width:72px;height:72px;padding:0;">
-                        <svg viewBox="0 0 120 120" fill="none" style="width:100%;height:100%;"><circle cx="60" cy="60" r="58" fill="#F7F6F4" stroke="#C8C5BF" stroke-width="1.5"/><path d="M36 78C36 78 34 48 60 34C86 48 84 78 84 78" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 34V78" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round"/><path d="M60 48L48 56" stroke="#A85121" stroke-width="2" stroke-linecap="round"/><path d="M60 48L72 56" stroke="#A85121" stroke-width="2" stroke-linecap="round"/><path d="M60 60L50 66" stroke="#A85121" stroke-width="2" stroke-linecap="round"/><path d="M60 60L70 66" stroke="#A85121" stroke-width="2" stroke-linecap="round"/></svg>
-                    </div>
-                    <h3>Clean</h3>
-                    <p>Personal care and home cleaning. No plastic, no chemicals.</p>
-                </div>
-                <div class="feature-card" style="cursor:pointer;" onclick="goToSection('products','section-live')">
-                    <div class="feature-icon" style="background:none;width:72px;height:72px;padding:0;">
-                        <svg viewBox="0 0 120 120" fill="none" style="width:100%;height:100%;"><circle cx="60" cy="60" r="58" fill="#F7F6F4" stroke="#C8C5BF" stroke-width="1.5"/><path d="M32 58L60 34L88 58" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 56V84H82V56" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="52" y="66" width="16" height="18" rx="1" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="64" cy="76" r="2" fill="#A85121"/></svg>
-                    </div>
-                    <h3>Live</h3>
-                    <p>Bedding, home goods, everyday essentials. The things you live with.</p>
-                </div>
-                <div class="feature-card" style="cursor:pointer;" onclick="goToSection('products','section-move')">
-                    <div class="feature-icon" style="background:none;width:72px;height:72px;padding:0;">
-                        <svg viewBox="0 0 120 120" fill="none" style="width:100%;height:100%;"><circle cx="60" cy="60" r="58" fill="#F7F6F4" stroke="#C8C5BF" stroke-width="1.5"/><path d="M20 82L44 42L56 58L72 32L100 82" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M64 44L72 32L80 44" stroke="#A85121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 82C40 76 50 80 60 76C70 72 80 78 90 82" stroke="#C8C5BF" stroke-width="1.5" stroke-linecap="round"/></svg>
-                    </div>
-                    <h3>Move</h3>
-                    <p>Gear for the trail. Packs, layers, boots. Tested in Yosemite, built to be repaired.</p>
-                </div>
-                <div class="feature-card" style="cursor:pointer;" onclick="showPage('sustain')">
-                    <div class="feature-icon" style="background:none;width:72px;height:72px;padding:0;">
-                        <svg viewBox="0 0 120 120" fill="none" style="width:100%;height:100%;"><circle cx="60" cy="60" r="58" fill="#F7F6F4" stroke="#C8C5BF" stroke-width="1.5"/><path d="M60 32L48 52H54V62H66V52H72L60 32Z" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 66L28 86H52" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M80 66L92 86H68" stroke="#0F0F0F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><polygon points="52,86 46,80 46,88" fill="#0F0F0F"/><polygon points="68,86 74,80 74,88" fill="#0F0F0F"/><path d="M55 72Q60 64 65 72Q60 76 55 72" fill="#A85121"/></svg>
-                    </div>
-                    <h3>Sustain</h3>
-                    <p>The circular economy in practice. Repair, reuse, recycle. Close the loop on waste.</p>
-                </div>
+    <!-- ── CATEGORY INDEX ────────────────────────────────────────────── -->
+    <section class="cat-index">
+        <div class="cat-index-inner">
+            <div class="cat-index-head">
+                <span class="eyebrow">The Index</span>
+                <h2>Every essential of being human, done sustainably.</h2>
+            </div>
+            <div class="cat-index-list">
+                <a class="cat-row" onclick="goToSection('products','section-drink')">
+                    <span class="cat-num">01</span>
+                    <span class="cat-name">Drink</span>
+                    <p class="cat-teaser">Bottles, tumblers, and the case against single-use.</p>
+                    <span class="cat-count">5 Items</span>
+                </a>
+                <a class="cat-row" onclick="goToSection('products','section-eat')">
+                    <span class="cat-num">02</span>
+                    <span class="cat-name">Eat</span>
+                    <p class="cat-teaser">The kitchen, rebuilt without plastic.</p>
+                    <span class="cat-count">7 Items</span>
+                </a>
+                <a class="cat-row" onclick="goToSection('products','section-clean')">
+                    <span class="cat-num">03</span>
+                    <span class="cat-name">Clean</span>
+                    <p class="cat-teaser">Personal care, laundry, home &mdash; no plastic, no chemicals.</p>
+                    <span class="cat-count">4 Items</span>
+                </a>
+                <a class="cat-row" onclick="goToSection('products','section-live')">
+                    <span class="cat-num">04</span>
+                    <span class="cat-name">Live</span>
+                    <p class="cat-teaser">Bedding, bath, the daily objects you live with.</p>
+                    <span class="cat-count">5 Items</span>
+                </a>
+                <a class="cat-row" onclick="goToSection('products','section-move')">
+                    <span class="cat-num">05</span>
+                    <span class="cat-name">Move</span>
+                    <p class="cat-teaser">Trail-tested gear, built to be repaired.</p>
+                    <span class="cat-count">4 Items</span>
+                </a>
+                <a class="cat-row" onclick="showPage('sustain')">
+                    <span class="cat-num">06</span>
+                    <span class="cat-name">Sustain</span>
+                    <p class="cat-teaser">Essays on the circular economy in practice.</p>
+                    <span class="cat-count">Journal</span>
+                </a>
             </div>
         </div>
     </section>
