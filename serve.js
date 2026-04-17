@@ -14,7 +14,7 @@ const types = {
 
 http.createServer((req, res) => {
   const url = req.url.split('?')[0];
-  const file = path.join(__dirname, url === '/' ? 'preview.html' : url);
+  const file = path.join(__dirname, url === '/' ? 'index.html' : url);
   const ext = path.extname(file);
   fs.readFile(file, (err, data) => {
     if (err) { res.writeHead(404); res.end('Not found'); }
