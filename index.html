@@ -1549,6 +1549,119 @@ a:hover { color: var(--accent-warm); }
     text-underline-offset: 3px;
 }
 
+/* ── Journal Feature (lead-story + deck) ───────────────────────────── */
+.journal-feature { margin-top: 2.5rem; }
+.journal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--color-border, #D0CEC9);
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+}
+.journal-eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-text-light, #6B6B6B);
+    margin: 0;
+}
+.journal-layout {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 3.5rem;
+    align-items: start;
+}
+@media (max-width: 900px) {
+    .journal-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+.j-lead { display: block; text-decoration: none; color: inherit; cursor: pointer; }
+.j-lead .j-media {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--color-bg-alt, #ECEAE7);
+}
+.j-lead .j-media img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: grayscale(0.35) contrast(1.03) brightness(0.98);
+    transition: transform 0.8s ease, filter 0.6s ease;
+}
+.j-lead:hover .j-media img { transform: scale(1.02); filter: grayscale(0.15) contrast(1.05); }
+.j-lead .j-body { padding-top: 1.75rem; }
+.j-meta-row {
+    display: flex; gap: 1rem; align-items: center;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-text-light, #6B6B6B);
+    margin-bottom: 1rem;
+}
+.j-cat { color: var(--accent, #A85121); font-weight: 600; }
+.j-sep { opacity: 0.4; }
+.j-lead h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3.2vw, 2.6rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 1rem;
+    color: var(--color-text, #111);
+}
+.j-dek {
+    font-family: var(--font-body, Georgia, serif);
+    font-size: 1.08rem;
+    line-height: 1.6;
+    color: #3A3A3A;
+    margin: 0 0 1.5rem;
+    max-width: 52ch;
+}
+.j-read {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-text, #111);
+    border-bottom: 1px solid var(--color-text, #111);
+    padding-bottom: 3px;
+}
+.j-deck { display: flex; flex-direction: column; gap: 2.25rem; }
+.j-item {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 1.25rem;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    padding-bottom: 2.25rem;
+    border-bottom: 1px solid var(--color-border, #D0CEC9);
+}
+.j-item:last-child { border-bottom: none; padding-bottom: 0; }
+.j-item .j-media {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--color-bg-alt, #ECEAE7);
+}
+.j-item .j-media img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: grayscale(0.35) contrast(1.03) brightness(0.98);
+    transition: transform 0.8s ease, filter 0.6s ease;
+}
+.j-item:hover .j-media img { transform: scale(1.02); filter: grayscale(0.15) contrast(1.05); }
+.j-item h4 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    line-height: 1.25;
+    margin: 0.5rem 0 0.5rem;
+    color: var(--color-text, #111);
+}
+.j-item .j-dek { font-size: 0.95rem; margin-bottom: 0.75rem; }
+.j-item .j-meta-row { font-size: 0.66rem; margin-bottom: 0.5rem; }
+@media (max-width: 600px) {
+    .j-item { grid-template-columns: 1fr; gap: 1rem; }
+}
+
 /* ── Footer ─────────────────────────────────────────────────────────── */
 
 .site-footer {
@@ -1834,41 +1947,66 @@ a:hover { color: var(--accent-warm); }
     <!-- ── FROM THE JOURNAL ──────────────────────────────────────────── -->
     <section class="section">
         <div class="section-inner">
-            <div class="section-header-row">
-                <div>
-                    <p class="section-label">From the Journal</p>
-                    <h2 class="section-title">Latest stories and updates.</h2>
-                </div>
-                <a class="text-link" onclick="showPage('sustain')" style="cursor:pointer;">View all posts &rarr;</a>
+            <div class="journal-head">
+                <p class="journal-eyebrow">The Journal — Field Notes on Living Lighter</p>
+                <a class="text-link" onclick="showPage('sustain')" style="cursor:pointer;">All stories &rarr;</a>
             </div>
-            <div class="blog-grid blog-grid-3" style="margin-top: 2rem;">
-                <article class="blog-card">
-                    <div class="blog-card-img"><span class="img-label">Blog Photo</span></div>
-                    <div class="blog-card-body">
-                        <time class="blog-date">March 10, 2026</time>
-                        <h3>Why We Stopped Buying "Eco-Friendly" Products</h3>
-                        <p>Most green labels are marketing. Here's what we look for instead.</p>
-                        <span class="blog-read-more">Read more &rarr;</span>
+            <div class="journal-feature">
+                <div class="journal-layout">
+                    <article class="j-lead" onclick="showPage('sustain')">
+                        <div class="j-media">
+                            <img src="wp-content/themes/flavor-child/images/journal-1.jpg" alt="Assorted glass and plastic bottles arranged on a minimal gray shelf — a study in what we call 'eco-friendly.'">
+                        </div>
+                        <div class="j-body">
+                            <div class="j-meta-row">
+                                <span class="j-cat">Recycling</span>
+                                <span class="j-sep">/</span>
+                                <time datetime="2026-03-10">March 10, 2026</time>
+                                <span class="j-sep">/</span>
+                                <span>8 min read</span>
+                            </div>
+                            <h3>Why We Stopped Buying "Eco-Friendly" Products</h3>
+                            <p class="j-dek">Most green labels are marketing. After two years of testing claims against reality, we rewrote our own criteria — here's what actually earns a spot on our shelf, and the four questions we ask before anything does.</p>
+                            <span class="j-read">Read the story</span>
+                        </div>
+                    </article>
+                    <div class="j-deck">
+                        <article class="j-item" onclick="showPage('sustain')">
+                            <div class="j-media">
+                                <img src="wp-content/themes/flavor-child/images/journal-2.jpg" alt="A row of glass storage jars holding dry goods on an open wooden kitchen shelf.">
+                            </div>
+                            <div class="j-body">
+                                <div class="j-meta-row">
+                                    <span class="j-cat">Kitchen</span>
+                                    <span class="j-sep">/</span>
+                                    <time datetime="2026-02-24">Feb 24, 2026</time>
+                                    <span class="j-sep">/</span>
+                                    <span>6 min</span>
+                                </div>
+                                <h4>The Kitchen Swap That Actually Stuck</h4>
+                                <p class="j-dek">Replacing plastic food storage with stainless steel and glass changed more than our pantry — it changed how we shop.</p>
+                                <span class="j-read">Read &rarr;</span>
+                            </div>
+                        </article>
+                        <article class="j-item" onclick="showPage('sustain')">
+                            <div class="j-media">
+                                <img src="wp-content/themes/flavor-child/images/journal-3.jpg" alt="Yosemite Valley at dawn with granite walls rising above the pine forest.">
+                            </div>
+                            <div class="j-body">
+                                <div class="j-meta-row">
+                                    <span class="j-cat">Field Notes</span>
+                                    <span class="j-sep">/</span>
+                                    <time datetime="2026-02-08">Feb 8, 2026</time>
+                                    <span class="j-sep">/</span>
+                                    <span>5 min</span>
+                                </div>
+                                <h4>What Yosemite Taught Us About Waste</h4>
+                                <p class="j-dek">Spend enough time somewhere this wild and you start to see consumption differently — and what you carry home changes too.</p>
+                                <span class="j-read">Read &rarr;</span>
+                            </div>
+                        </article>
                     </div>
-                </article>
-                <article class="blog-card">
-                    <div class="blog-card-img"><span class="img-label">Blog Photo</span></div>
-                    <div class="blog-card-body">
-                        <time class="blog-date">February 24, 2026</time>
-                        <h3>The Kitchen Swap That Actually Stuck</h3>
-                        <p>Replacing plastic food storage with stainless steel changed everything.</p>
-                        <span class="blog-read-more">Read more &rarr;</span>
-                    </div>
-                </article>
-                <article class="blog-card">
-                    <div class="blog-card-img"><span class="img-label">Blog Photo</span></div>
-                    <div class="blog-card-body">
-                        <time class="blog-date">February 8, 2026</time>
-                        <h3>What Yosemite Taught Us About Waste</h3>
-                        <p>When you spend enough time in a place this wild, you see consumption differently.</p>
-                        <span class="blog-read-more">Read more &rarr;</span>
-                    </div>
-                </article>
+                </div>
             </div>
         </div>
     </section>
