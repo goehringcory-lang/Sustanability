@@ -2488,6 +2488,7 @@ a:hover { color: var(--accent-warm); }
 
     // Click delegation for product cards
     document.addEventListener('click', function (e) {
+        if (e.target.closest('a')) return;
         var card = e.target.closest('.product-card');
         if (!card) return;
         var h3 = card.querySelector('h3');
