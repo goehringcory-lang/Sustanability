@@ -14,7 +14,6 @@ wp-content/themes/*
 !.gitignore
 !.htaccess
 !index.html
-!preview.html
 !README.md
 !setup-wordpress.sh
 !wp-config-additions.php
