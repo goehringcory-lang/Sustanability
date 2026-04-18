@@ -18,6 +18,11 @@ wp-content/themes/*
 !setup-wordpress.sh
 !wp-config-additions.php
 
+# === Claude Code skills (project-level) ===
+!.claude/
+.claude/*
+!.claude/skills/
+
 # === Dependencies ===
 node_modules/
 vendor/
